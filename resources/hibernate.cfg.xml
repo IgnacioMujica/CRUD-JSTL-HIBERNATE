@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+		<!-- Config database -->
+    	<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+       	<property name="connection.url">jdbc:oracle:thin:@localhost:1521/xe</property>
+       	<property name="connection.username">boris1</property>
+        <property name="connection.password">123</property> 
+        
+        <!-- pool de conexiones  -->
+        <property name="connection.pool_size">1</property> 	
+        
+        <!-- mostrar codigo SQL en consola  -->
+        <property name="show_sql">true</property> 
+        
+        <mapping class="com.et.entidades.TODO"/>
+    </session-factory>
+</hibernate-configuration>
